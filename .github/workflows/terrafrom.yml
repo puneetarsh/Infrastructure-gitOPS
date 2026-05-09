@@ -25,12 +25,12 @@ jobs:
     terraform:
         name: "Apply terrafrom code changes"
         runs-on: ubuntu-latest
-        default:
+        defaults:
             run:
-              shell: bash
+             shell: bash
               #use a bash shell and working dir should be ./terrafrom
               #so this will throughout all steps
-              working-directory: ./terraform
+             working-directory: ./terraform
         steps:
           - name: "Checkout code"
             uses: actions/checkout@v5
